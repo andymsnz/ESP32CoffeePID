@@ -1,4 +1,5 @@
-# ESP32CoffeePID
+# ESP32CoffeePID - 20221217 latest version
+
 Simple ESP32 based PID controller for espresso machines. Adjustable over wifi using the ESP32 webserver functionality
 
 [WORK IN PROGRESS] 
