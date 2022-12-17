@@ -16,18 +16,21 @@ Notes:
 
 I am a begginer, be gentle
 
-Prototyping on a TTGO T-display. TFT_eSPI will need to be configured for your boards/scree; as will the SPI pins for which ever thermocouple driver you are using.
+- Original Prototyping on a TTGO T-display (20221216 file). 
+- Moved to an ESP32 DEVKIT board and SPI 2.0" TFT PANEL for final packaging reasons. (20221207 file).
+
+TFT_eSPI will need to be configured for your boards/screen; as will the SPI pins for which ever thermocouple driver you are using.
 
 Once it's installed, I will update with wiring suggestions. 
 
 Problems:
 
-Trying to get the NTPClient to log date/time of brews (eventually), amongst other future functionality
+Add an NTPClient to log date/time of brews (eventually), amongst other future functionality
 
 Future dreams:
 
 - Increase the functionality in include pump & pressure control. Inspired by gagguino, but using the native benefits of ESP32.
 - Improve Web-GUI and TFT presenttation. Currently rough and ready works for me.
-- Add a shot time
+- Add a shot timer using optocoupler detection of for the switch press, or the like.
 - Explore multiple PID options for flexibility
 - I may get inspired and design a PCB / 3D printed housing etc.
