@@ -45,10 +45,18 @@ Once it's installed, I will update with wiring suggestions.
 - 40A DA (DC control, AC switching) Sold State Relay (SSR) | Read the manufactures mounting requirements, these need a heatsink or to be thermally mounted to a metallic surface (else magic smoke will happen);
 - AC-DC 5V/10W power supply to power the ESP32 board and peripherals.
 
+
+
 https://www.aliexpress.com/item/1005004237117445.html?spm=a2g0o.order_list.order_list_main.16.32bb1802EtOHys
+
 https://www.aliexpress.com/item/32835036293.html?spm=a2g0o.order_list.order_list_main.4.15291802JzWv0Z
+
 https://www.aliexpress.com/item/1005004268911484.html?spm=a2g0o.order_list.order_list_main.16.36901802NZTg8b
+
 https://www.aliexpress.com/item/1005004268911484.html?spm=a2g0o.order_list.order_list_main.16.36901802NZTg8b
+
 https://www.aliexpress.com/item/1005001626749980.html?spm=a2g0o.order_list.order_list_main.160.36901802NZTg8b
+
+
 
 **Wiring diagram / suggestions (coming soon)**
