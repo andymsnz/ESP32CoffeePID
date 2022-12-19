@@ -33,8 +33,8 @@ Once it's installed, I will update with wiring suggestions.
 
 - Increase the functionality in include pump & pressure control. Inspired by gagguino, but using the native benefits of ESP32;
 - Improve Web-GUI and TFT presentation, and include near realtime updates for the boiler temp, as well as sting target; to improve headless use cases;
-- Add a shot timer using optocoupler detection of for the switch press, or the like;
-- Explore multiple PID options for flexibility;
+- Add a shot timer using optocoupler detection for switch press, or the like;
+- Explore multiple PID options/modes (fuzzy etc) for flexibility;
 - I may get inspired and design a PCB / 3D printed housing; to improve packaging
 
 **Bill of materials: (what i used for v1.0)**
