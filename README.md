@@ -1,14 +1,16 @@
 # ESP32CoffeePID - 20221219 latest version
+# Experimental code now has autotune for PID (20221229 version)
 
 Simple ESP32 based PID controller for espresso machines. Adjustable over wifi using the ESP32 webserver functionality.
 
 *Inspired by Gagguino; but using the ESP32 platform. https://gaggiuino.github.io/#/ | Go there, build that, be awesome.*
 
-**[WORK IN PROGRESS]** - *Entering testing in the Gaggia Classic shortly*
+**[WORK IN PROGRESS]** - *Code has been bench testing on a Gaggia classic, PID functioning well (exp. software version 20221229) and auto-tune has yielded good control of temperature.
 
-*Will be installed into a Gaggia Classic to control boiler temperature for brew (initially).*
+*WInstalled into a Gaggia Classic to control boiler temperature for brew (initially).*
 
   - <PID_V1.h> providing the PID control for the temperature, from a MAX6675 thermocouple driver.
+  - PID autotune deployed in experimental code version
   - PID setpoint value stored during power-down using <SPIFFS.h>
   - M4 k-type thermocouple will replace the 'brew' thermo-switch on the side of the boiler 
   - The heater will be controlled via a 40A DA Solid State Relay.
@@ -35,7 +37,7 @@ Once it's installed, I will update with wiring suggestions.
 - Improve Web-GUI and TFT presentation, and include near realtime updates for the boiler temp, as well as sting target; to improve headless use cases;
 - Add a shot timer using optocoupler detection for switch press, or the like;
 - Explore multiple PID options/modes (fuzzy etc) for flexibility;
-- I may get inspired and design a PCB / 3D printed housing; to improve packaging
+- I may get inspired and design a PCB / 3D printed housing; to improve packaging (I have a 0.1v of a PCB, but it requires some revisions, keeping it under lock and key for now)
 
 **Bill of materials: (what i used for v1.0)**
 
@@ -60,3 +62,4 @@ https://www.aliexpress.com/item/1005001626749980.html?spm=a2g0o.order_list.order
 
 
 **Wiring diagram / suggestions (coming soon)**
+**Experimental version has mapped PIN OUTS for ESP32 DevKit expanded use (future plans); these are what will be mapped out on the PCB**
