@@ -1,11 +1,24 @@
-# ESP32CoffeePID - 20221219 latest version
-# Experimental code now has autotune for PID (20221229 version)
+# ESP32CoffeePID - 20221219 latest tested version
 
-Simple ESP32 based PID controller for espresso machines. Adjustable over wifi using the ESP32 webserver functionality.
+!!!!!!!!!!! CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION !!!!!!!!!!!
+
+New Mods include changes to your project coffee machine's AC wiring. I HIGHLY recommend you don't do this unless you have training, or can be supervised by someone who has. AC Voltages do KILL. Be careful, triple check every wire, pay particular attention to end CRIMPS, use ferules where needed and route wiring appropriately to avoid strain and avoid direct contact with the boiler and/or water.
+
+Fitting the water sensor requires cutting the pumop line, using a t-piece. Get spare water line, so you can repair / revert if required; FOCUS on the joins and make sure push-fits are fully seated and thread tape is used where approriate to avoid leaks. 
+
+ELECTICITY, HEAT AND WATER UNDER PRESSURE is a dangerous mix. Please be careful.
+
+Saying that, I am not your grandfather!!! Learn. Go slow, learn, ask for help; check, double check, tripple check; and ideally have someone else check also.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Experimental code now has autotune for PID, Pump Sensing / Presure control and Nrew Switch detection (20230102 version) | This is a big revision; but will become the main branch once I am able to dial it in a bit more; add details on hardware requirements etc.
+
+Simple-ish ESP32 based PID controller for espresso machines. Adjustable over wifi using the ESP32 webserver functionality.
 
 *Inspired by Gagguino; but using the ESP32 platform. https://gaggiuino.github.io/#/ | Go there, build that, be awesome.*
 
-**[WORK IN PROGRESS]** - *Code has been bench testing on a Gaggia classic, PID functioning well (exp. software version 20221229) and auto-tune has yielded good control of temperature.
+**[WORK IN PROGRESS]** - *Code has been bench testing on a Gaggia classic, PID functioning well (exp. software version 20230102) and auto-tune has yielded good control of temperature; the AC Dimmer PWM has control authority over the water pump.
 
 *WInstalled into a Gaggia Classic to control boiler temperature for brew (initially).*
 
@@ -39,6 +52,8 @@ Once it's installed, I will update with wiring suggestions.
 - Explore multiple PID options/modes (fuzzy etc) for flexibility;
 - I may get inspired and design a PCB / 3D printed housing; to improve packaging (I have a 0.1v of a PCB, but it requires some revisions, keeping it under lock and key for now)
 
+Hardware packagine is definitely a reliability concern, it's in view; will need a v0.1 PCB and some better 3D printed encolosures at a minimum.
+
 **Bill of materials: (what i used for v1.0)**
 
 - ESP32 Devkit board (you'll need to SPI-bus, so having a large number of exposed GPIO pins is a good idea;
@@ -47,6 +62,15 @@ Once it's installed, I will update with wiring suggestions.
 - 40A DA (DC control, AC switching) Sold State Relay (SSR) | Read the manufactures mounting requirements, these need a heatsink or to be thermally mounted to a metallic surface (else magic smoke will happen);
 - AC-DC 5V/10W power supply to power the ESP32 board and peripherals.
 
+Experimental Version additions: (I will provide links when i get time)
+
+- XDB-301 1.2Mpa pressure sensor (3 wire 0.5-5v - often labelled as 0-5v)
+- AC-DC optocoupler (to read the AC brew switch activation (Not looking to SSR switch the pump, or control stem at this stage)
+- AC Dimmer 400V 4A (to PWM the pump); RobotDyn seems to be the go-to for a Zero Crossing Triac module atm
+- TOF10120 time of flight distance sensor (for water tank level detection)
+- Addressable LEDs (fastLED compatible - i.e. WS2812) for status array (above tank lighting)
+- LOTS OF CABLE
+- 3D prined enclosures, heat-shrink, crimps (lots of crimps), patience and ATTENTION TO DETAIL AROUND AC (high voltage)
 
 
 https://www.aliexpress.com/item/1005004237117445.html?spm=a2g0o.order_list.order_list_main.16.32bb1802EtOHys
@@ -58,7 +82,6 @@ https://www.aliexpress.com/item/1005004268911484.html?spm=a2g0o.order_list.order
 https://www.aliexpress.com/item/1005004268911484.html?spm=a2g0o.order_list.order_list_main.16.36901802NZTg8b
 
 https://www.aliexpress.com/item/1005001626749980.html?spm=a2g0o.order_list.order_list_main.160.36901802NZTg8b
-
 
 
 **Wiring diagram / suggestions (coming soon)**
