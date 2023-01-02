@@ -4,19 +4,22 @@
 
 New Mods include changes to your project coffee machine's AC wiring. I HIGHLY recommend you don't do this unless you have training, or can be supervised by someone who has. AC Voltages do KILL. Be careful, triple check every wire, pay particular attention to end CRIMPS, use ferules where needed and route wiring appropriately to avoid strain and avoid direct contact with the boiler and/or water.
 
-Fitting the water sensor requires cutting the pumop line, using a t-piece. Get spare water line, so you can repair / revert if required; FOCUS on the joins and make sure push-fits are fully seated and thread tape is used where approriate to avoid leaks. 
+Fitting the water sensor requires cutting the pressure side pump water line, using a t-piece. Get spare water line, so you can repair / revert if required; FOCUS on the joins and make sure push-fits are fully seated and thread tape is used where approriate to avoid leaks. 
 
-ELECTICITY, HEAT AND WATER UNDER PRESSURE is a dangerous mix. Please be careful.
+ELECTICITY & HOT WATER UNDER PRESSURE is a dangerous mix. Please be careful.
 
-Saying that, I am not your grandfather!!! Learn. Go slow, learn, ask for help; check, double check, tripple check; and ideally have someone else check also.
+Saying that, I am not your grandfather!!! Go slow, learn, ask for help; check, double check, tripple check; and ideally have someone else check also.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-# Experimental code now has autotune for PID, Pump Sensing / Presure control and Nrew Switch detection (20230102 version) | This is a big revision; but will become the main branch once I am able to dial it in a bit more; add details on hardware requirements etc.
+# Experimental code now has autotune for PID, Pump Sensing / Presure control and Brew Switch detection (20230102 version) | This is a big revision; but will become the main branch once I am able to dial it in a bit more; add details on hardware requirements etc.
+
+
 
 Simple-ish ESP32 based PID controller for espresso machines. Adjustable over wifi using the ESP32 webserver functionality.
 
-*Inspired by Gagguino; but using the ESP32 platform. https://gaggiuino.github.io/#/ | Go there, build that, be awesome.*
+*Inspired by Gagguino; but using the ESP32 platform. https://gaggiuino.github.io/#/ | Go there, build that, be awesome. It's had a lot more time, testing to mature than this madness.
+
 
 **[WORK IN PROGRESS]** - *Code has been bench testing on a Gaggia classic, PID functioning well (exp. software version 20230102) and auto-tune has yielded good control of temperature; the AC Dimmer PWM has control authority over the water pump.
 
